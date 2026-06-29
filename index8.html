@@ -1,0 +1,25 @@
+<!--create a html page to demonstrate the use of innertext and innerhtml property-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printName()
+        {
+            var name=document.getElementById("txtname").
+            value;
+            var pr=document.getElementById("para");
+            pr.innerHTML="Name is: <u>"+name+"</u>";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtname" placeholder="Name" />
+    <br><br>
+    <input type="button" value="Click Here" onclick="printName()" />
+    <br><br>
+    <p id="para"></p>    
+</body>
+</html>s
