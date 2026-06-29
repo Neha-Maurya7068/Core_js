@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  function GetResult(){
+    var n1,n2,sum;
+    n1=document.getElementById("tnum1").value;
+    n2=document.getElementById("tnum2").value;
+    sum=parseInt(n1)+parseInt(n2);
+    document.getElementById("sp1").innerText="Addition of number="+sum;
+    document.getElementById("sp2").innerHTML="<b>Addition of number</b>="+sum;
+  }
+    </script>
+</head>
+<body>
+   <input type="number" placeholder="Enter any number" id="tnum1"/> 
+   <input type="number" placeholder="Enter any second number" id="tnum2"/> 
+   <input type="button" value="GetAddition" onClick="GetResult()" />
+   <span id="sp1"></span>
+   <span id="sp2"></span>
+
+</body>
+</html>
