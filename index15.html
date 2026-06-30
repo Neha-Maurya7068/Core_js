@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=new Array(10);
+        for(x=0;x<10;x++)
+        {
+            arr[x]=parseInt(prompt("Enter a number: "));
+        }
+        arr.sort(function(a,b){return a-b;});
+        alert(arr);
+        alert("Max number is: "+arr[arr.length-1]);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
