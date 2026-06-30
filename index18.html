@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var circle={rad:5,pi:3.14,getArea:function(){
+            var a=this.pi*this.rad*this.rad;
+            alert("Area of circle is: "+a);
+        },getPeri:function(){
+            var p=2*this.pi*this.rad;
+            alert("Perimeter is: "+p);
+        }};
+        circle.rad=parseFloat(prompt("Enter radius of circle: "));
+        circle.getArea();
+        circle.getPeri();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
