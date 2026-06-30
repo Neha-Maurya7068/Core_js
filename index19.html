@@ -1,0 +1,23 @@
+<!--create an object with required properties and functions to find area and perimeter of rectangle-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var rectangle={len:4,width:5,getArea:function(){
+            var a=this.len*this.width;
+            alert("Area of rectangle is: "+a);
+        },getPeri:function(){
+            var p=2*(this.len+this.width);
+            alert("Perimeter is: "+p);
+        }};
+        rectangle.getArea();
+        rectangle.getPeri();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
