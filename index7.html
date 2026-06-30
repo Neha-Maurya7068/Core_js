@@ -1,0 +1,31 @@
+<!-- create a html page to read any two numbers from 2 textbox and print result inside third textbox on button click-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addNums()
+        {
+        var t1,t2,t3,num1,num2,res;
+        t1=document.getElementById("txtnum1");
+        t2=document.getElementById("txtnum2");
+        t3=document.getElementById("txtres");
+        num1=t1.value;
+        num2=t2.value;
+        res=parseInt(num1)+parseInt(num2);
+        t3.value=res;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="txtnum1" placeholder="Enter first number" />
+    <br><br>
+    <input type="number" id="txtnum2" placeholder="Enter second number" />
+    <br><br>
+    <input type="button" value="Add" onclick="addNums()" />
+    <br><br>
+    <input type="number" id="txtres" placeholder="Result" />
+</body>
+</html>
