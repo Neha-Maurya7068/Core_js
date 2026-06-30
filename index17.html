@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getCount()
+        {
+            var str,ch,x,count=0,sp;
+            str=document.getElementById("txtstr").value;
+            for(x=0;x<str.length;x++)
+            {
+                ch=str.charAt(x);
+                if(ch=='k' || ch=='K')
+                count++;
+            }
+            sp=document.getElementById("spres");
+            sp.innerText="Number of occurance of k: "+count;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtstr" placeholder="Enter a string" />
+    <br><br>
+    <input type="button" value="Click here" onclick="getCount()" />
+    <br><br>
+    <span id="spres"></span>
+</body>
+</html>
