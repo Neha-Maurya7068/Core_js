@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+            var techs=["HTML","CSS","Bootstrap","JavaScript","Database","C Programming"];
+            var content="";
+            for(x=0;x<techs.length;x++)
+            {
+                content=content+"<li>"+techs[x]+"</li>";
+            }
+            document.getElementById("mylist").innerHTML=content;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Print Items"
+    onclick="display()" />
+    <br><br>
+    <ol id="mylist"></ol>
+</body>
+</html>
