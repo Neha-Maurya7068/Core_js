@@ -1,0 +1,30 @@
+<!--create a html page to read a number from an input field and print table of that number inside a p tag  on button click-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printTbl()
+        {
+            var num,x,t,pr,content="";
+            num=document.getElementById("txtnum").value;
+            pr=document.getElementById("para");
+            for(x=1;x<=10;x++)
+            {
+                t=num*x;67
+                content=content+t+"<br>";
+            }
+            pr.innerHTML=content;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="txtnum" placeholder="Enter a number" />
+    <br><br>
+    <input type="submit" value="Print Table" onclick="printTbl()" />
+    <br><br>
+    <p id="para"></p>
+</body>
+</html>
