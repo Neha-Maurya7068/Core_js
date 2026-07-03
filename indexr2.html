@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function TogetData(){
+            var rcontent=document.getElementById("para").innerText;
+            document.getElementById("sp").innerText='Value of paragraph is:'+rcontent;
+        }
+    </script>
+</head>
+<body>
+    <p id="para">This is the first Recovery class of Javascript</p>
+    <span id="sp"></span>
+    <input type="button" value="ShowData" onClick="TogetData()" />
+</body>
+</html>
