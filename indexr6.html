@@ -1,0 +1,24 @@
+
+<html>
+    <head>
+ <script>
+  function ToShowRecord(){
+    var name,age,mob,email;
+    name=document.getElementById('tname').value;
+    age=document.getElementById('tage').value;
+    mob=document.getElementById('tmob').value;
+    email=document.getElementById('temail').value;
+
+    document.getElementById("para").innerText="Name is:"+name+"Age is:"+age+"Mobile Number is:"+mob+"EmailId is:"+email;
+  }
+ </script>
+    </head>
+    <body>
+  <input type="text" placeholder="Enter your Name" id="tname" /><br></br>
+  <input type="number" placeholder="Enter your Age" id="tage" /><br></br>
+  <input type="numberr" placeholder="Enter your Number" id="tmob" /><br></br>
+  <input type="email" placeholder="Enter your Email" id="temail" /><br></br>
+  <input type="button" value="PrintData" onClick="ToShowRecord()" />
+  <p id="para"></p>
+    </body>
+</html>
