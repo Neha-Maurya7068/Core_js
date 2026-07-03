@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GetName()
+        {
+        var or,ow,sw,ss;
+        or=document.getElementById("tname")//object read
+        ow=document.getElementById("sname")//object
+        ss=or.value// to read data of tname textbox
+        ow.value=ss;
+    }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter your name" id="tname" />
+    <input type="text" placeholder="Get Name" id="sname" />
+    <input type="button" value="GetName" onClick="GetName()" />
+</body>
+</html>
