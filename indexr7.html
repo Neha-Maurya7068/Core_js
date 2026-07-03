@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getCal(){
+            var n1,n2,op,res;
+            n1=document.getElementById("tnum1").value;
+            n2=document.getElementById("tnum2").value;
+            op=document.getElementById("sel").value;
+            if(op=='add'){
+                res=parseInt(n1)+parseInt(n2);
+            }
+            else if(op=='sub')
+            {
+                res=n1-n2;
+            }
+            else if(op=='mul')
+            {
+                res=n1*n2;
+            }
+            else if(op=='div'){
+                res=n1/n2;
+            }
+            document.getElementById("para").innerHTML="<b>Result is:</b>"+res;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="tnum1" placeholder="Enter first number"/><br>
+    <input type="number" id="tnum2" placeholder="Enter second number"/><br>
+    <select id="sel" onChange="getCal()">
+        <option value="add">Add</option>
+        <option value="sub">Sub</option>
+        <option value="mul">Mul</option>
+        <option value="div">Div</option>
+    </select>
+  <p id="para"></p>
+</body>
+</html>
