@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function converter()
+        {
+            var num,res;
+            num=document.getElementById("ft").value;
+            res=num*12;
+            document.getElementById('inch').value=res;
+        }
+    </script>
+</head>
+<body>
+      <input type="number" id="ft" value="feet" placeholder="Enter Feet"/><br><br>
+      <input type="button" id="btn" value="convert" onclick="converter()"><br><br>
+      <input type="number" id="inch" value="inch" placeholder="Enter inches"/>  
+</body>
+</html>
