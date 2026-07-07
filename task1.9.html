@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="main" placeholder="please enter the value"><br><br>
+    <input type="button" value="click me" onclick="sumOfDigit()">
+    <input type="number" id="row">
+</body>
+<script>
+    function sumOfDigit(){
+        var num,rem,sum=0;
+        num=document.getElementById('main').value;
+        num=parseInt(num);
+        while(num>0){
+            rem=num%10;
+            sum=sum+rem;
+            num=Math.trunc(num/10);
+        }
+        document.getElementById('row').value=sum;
+    }
+</script>
+</html>
