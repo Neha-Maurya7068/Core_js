@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#main{
+    border: 2px solid black;
+    width: 170px;
+    height: 139px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 18%;    
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+    <input type="number" id="txtInput1" placeholder="Please enter the value" /><br><br>
+    <input type="number" id="txtInput2" placeholder="Please enter the value" /><br><br>
+    <select id="res" onchange="calculate()" />
+        <option>--Select Operation--</option>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <br><br>
+   <input type="number" id="row" placeholder="Get the res in field"/>
+   </div>
+</body>
+<script>
+    function calculate(){
+        var a,b,num1,num2 ,c,res,ope;
+        num1=document.getElementById('txtInput1').value;
+      
+
+        num2=document.getElementById('txtInput2').value;
+        
+          
+        ope=document.getElementById('res').value;
+    
+        switch(ope){
+        case '+':
+        res =parseInt(num1)+parseInt(num2);
+        break;
+        case '-':
+        res =num1-num2;
+        break;
+        case '*':
+        res=num1*num2;   
+        break;
+        case '/':
+        res=num1/num2;
+        break;   
+       }
+        
+       document.getElementById('row').value=`${res}`;
+       
+    }
+</script>
+</html>
