@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pTag">I am coming from Ayodhya in next week.</p><br><br>
+    <input type="button" value="Read content" onclick="demo()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Write content" onclick="demo2()">
+    <p id="res"></p>
+</body>
+<script>
+    function demo(){
+        var a,x;
+        a=document.getElementById('pTag');
+        x=a.innerHTML;
+       return x;
+    }
+    function demo2(){
+        b=document.getElementById('res');
+        b.innerHTML=demo();
+    }
+</script>
+</html>
