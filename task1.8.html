@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="main" placeholder="Please enter the value"><br><br>
+    <input type="button" value="click me" onclick="factorial()"><br><br>
+    <span id="tag"></span>
+</body>
+<script>
+    function factorial(){
+        var a,i,fact=1;
+        a=document.getElementById('main').value;
+        for(i=1;i<=a;i++){
+            fact=fact*i;
+        }
+        document.getElementById('tag').innerHTML=` the factorial is =${fact}`;
+    }
+</script>
+</html>
