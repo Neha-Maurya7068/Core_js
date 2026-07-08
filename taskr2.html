@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <script>
+        function displayInfo() {
+            // Get values from text boxes
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const age = document.getElementById('age').value;
+
+            // Format the result text
+            const resultText = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nAge: ${age}`;
+
+            // Display result in the textarea
+            document.getElementById('result').value = resultText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Personal Information Form</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br/>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br/>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile"><br><br/>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age"><br><br/>
+
+    <button onclick="displayInfo()">Submit</button>
+    <br><br>
+
+    <textarea id="result" readonly rows="4"></textarea>
+</body>
+</html>
