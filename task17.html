@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <script>
+        // Create the SI object with properties and method
+        const SI = {
+            pa: 0, // Principal Amount
+            n: 0,  // Number of years
+            r: 0,  // Rate of interest
+
+            // Method to calculate and return simple interest
+            getSI: function() {
+                return (this.pa * this.n * this.r) / 100;
+            }
+        };
+
+        // Function to read input values and display the simple interest
+        function calculateSimpleInterest() {
+            // Get values from input fields
+            SI.pa = parseFloat(document.getElementById("principal").value);
+            SI.n = parseFloat(document.getElementById("years").value);
+            SI.r = parseFloat(document.getElementById("rate").value);
+
+            // Calculate simple interest using the getSI method
+            const simpleInterest = SI.getSI();
+
+            // Display the calculated simple interest
+            document.getElementById("result").textContent = "Simple Interest: $" + simpleInterest.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+
+    <!-- Input fields for principal amount, number of years, and rate of interest -->
+    <label for="principal">Principal Amount:</label>
+    <input type="number" id="principal" placeholder="Enter Principal Amount" required>
+    <br><br>
+
+    <label for="years">Number of Years:</label>
+    <input type="number" id="years" placeholder="Enter Number of Years" required>
+    <br><br>
+
+    <label for="rate">Rate of Interest (%):</label>
+    <input type="number" id="rate" placeholder="Enter Rate of Interest" required>
+    <br><br>
+
+    <!-- Button to calculate and display simple interest -->
+    <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+
+    <!-- Div to display the result -->
+    <div id="result"></div>
+</body>
+</html>
