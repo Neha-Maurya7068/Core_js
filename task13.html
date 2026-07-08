@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Items in Select Tag</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        select {
+            width: 200px;
+            height: 35px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Items from Array</h2>
+    
+    <!-- Select tag where items will be shown -->
+    <select id="itemSelect">
+        <option value="">--Select an item--</option>
+    </select>
+
+    <!-- Button to trigger the loading of items -->
+    <button onclick="loadItems()">Load Items</button>
+
+    <script>
+        // Static array with items
+        const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+        // Function to load items into the select tag
+        function loadItems() {
+            const selectElement = document.getElementById("itemSelect");
+
+            // Clear existing options except the default one
+            selectElement.innerHTML = '<option value="">--Select an item--</option>';
+
+            // Loop through the items array and create option elements
+            for (let i = 0; i < items.length; i++) {
+                const option = document.createElement("option");
+                option.value = items[i];
+                option.text = items[i];
+                selectElement.appendChild(option);
+            }
+        }
+    </script>
+</body>
+</html>
