@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Name Display</title>
+    <script>
+        function displayFullName() {
+            // Get values from the input fields
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+
+            // Combine first and last name
+            const fullName = firstName + " " + lastName;
+
+            // Display full name in the span
+            document.getElementById("fullNameDisplay").textContent = fullName;
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+
+    <!-- Input fields for first and last name -->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="First Name">
+    <br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Last Name">
+    <br><br>
+
+    <!-- Button to display full name -->
+    <button onclick="displayFullName()">Show Full Name</button>
+
+    <!-- Span to display full name -->
+    <p>Full Name: <span id="fullNameDisplay"></span></p>
+</body>
+</html>
