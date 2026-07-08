@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowels in String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Vowel Counter</h2>
+
+    <!-- Input field to enter the string -->
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" value="Kamadgiri">
+
+    <!-- Button to trigger the vowel counting -->
+    <button onclick="countVowels()">Count Vowels</button>
+
+    <!-- Paragraph to display the result -->
+    <p id="result"></p>
+
+    <script>
+        // Function to count vowels in a string
+        function countVowels() {
+            // Get the input string
+            const str = document.getElementById("inputString").value.toLowerCase();
+            
+            // Define the vowels
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            
+            // Initialize a counter for vowels
+            let vowelCount = 0;
+            
+            // Loop through the string and count vowels
+            for (let i = 0; i < str.length; i++) {
+                if (vowels.includes(str[i])) {
+                    vowelCount++;
+                }
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = `Entered String is: ${document.getElementById("inputString").value}.Number of vowels is: ${vowelCount}`;
+        }
+    </script>
+</body>
+</html>
