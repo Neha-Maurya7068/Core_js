@@ -1,0 +1,25 @@
+<!--Create a html page to take some content and image in a div tag and onclick of button print all the content of div tag in another div tag-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ToShowContents(){
+            var d1;
+            d1=document.getElementById('dv1').innerHTML;
+            document.getElementById('dv2').innerHTML=d1;
+        }
+    </script>
+</head>
+<body>
+    <div id="dv1" style="border:1px solid black">
+        This is the second  recovery class
+        <img src="./images/garden.jpg" />
+    </div>
+    <br><br/>
+    <input type="button" id="btn" value="ShowContent" onClick="ToShowContents()" />
+    <div id="dv2"></div>
+</body>
+</html>
