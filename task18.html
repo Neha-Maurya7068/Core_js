@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Analysis</title>
+    <script>
+        // Function to analyze the string
+        function analyzeString() {
+            // Get the input string and the character/word to search
+            const inputString = document.getElementById("inputString").value;
+            const searchTerm = document.getElementById("searchTerm").value;
+
+            // Get the length of the string
+            const lengthOfString = inputString.length;
+
+            // Get the first and last occurrence index of the search term
+            const firstOccurrence = inputString.indexOf(searchTerm);
+            const lastOccurrence = inputString.lastIndexOf(searchTerm);
+
+            // Prepare the result text
+            let resultText = Length of the string: ${lengthOfString} <br>;
+
+            if (firstOccurrence !== -1) {
+                resultText += First occurrence of `${searchTerm}`: Index ${firstOccurrence}<br>;
+                resultText += Last occurrence of `${searchTerm}`: Index ${lastOccurrence};
+            } else {
+                resultText += ${searchTerm} not found in the string.;
+            }
+
+            // Display the result in the div
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</head>
+<body>
+    <h1>String Analysis</h1>
+
+    <!-- Input fields for string and character/word -->
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="Enter string" required>
+    <br><br>
+
+    <label for="searchTerm">Enter Character/Word to Search:</label>
+    <input type="text" id="searchTerm" placeholder="Enter character/word" required>
+    <br><br>
+
+    <!-- Button to analyze the string -->
+    <button onclick="analyzeString()">Analyze String</button>
+
+    <!-- Div to display the result -->
+    <div id="result"></div>
+</body>
+</html>
