@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Details</title>
+    <script>
+        // Create the laptop object with static values
+        const laptop = {
+            Id: "LPT123",
+            Brand: "Dell",
+            Price: "$1200",
+            Processor: "Intel Core i7"
+        };
+
+        // Function to display laptop details
+        function displayLaptopDetails() {
+            // Access the div and print the laptop's details
+            const laptopDetailsDiv = document.getElementById("laptopDetails");
+            laptopDetailsDiv.innerHTML = `
+                <p><strong>ID:</strong> ${laptop.Id}</p>
+                <p><strong>Brand:</strong> ${laptop.Brand}</p>
+                <p><strong>Price:</strong> ${laptop.Price}</p>
+                <p><strong>Processor:</strong> ${laptop.Processor}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Laptop Information</h1>
+
+    <!-- Button to display laptop details -->
+    <button onclick="displayLaptopDetails()">Show Laptop Details</button>
+
+    <!-- Div where laptop details will be displayed -->
+    <div id="laptopDetails"></div>
+</body>
+</html>
